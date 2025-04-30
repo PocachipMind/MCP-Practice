@@ -100,3 +100,84 @@ if __name__ == "__main__":
     # MCP 서버 실행 (표준입출력 transport 사용)
     mcp.run(transport="stdio")
 ```
+## 2. Client : Terminal을 통한 대화 ( 파일 mcp_client_local_terminal.py )
+
+MCP 서버의 툴을 호출하여 사용하기.
+
+MCP 서버에 클라이언트 세션으로 연결한 후, 서버가 노출한 툴을 불러와서 에이전트의 도구로 활용.
+
+stdio_client 함수를 사용하여 STDIO 방식 MCP 서버 프로세스를 실행 및 연결
+
+ClientSession을 통해 통신 세션을 관리
+
+session.initialize()로 세션을 초기화한 뒤, load_mcp_tools(session) 함수를 이용해 서버의 툴 목록을 가져와 LangChain 호환 툴 객체로 변환
+
+```
+import asyncio
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
+from langchain_mcp_adapters.tools import load_mcp_tools
+from langgraph.prebuilt import create_react_agent
+from langchain_openai import ChatOpenAI 
+from langchain_core.messages import HumanMessage, AIMessage
+
+from langgraph.checkpoint.memory import MemorySaver
+
+from dotenv import load_dotenv
+load_dotenv()
+
+svrpath = "./mcp_server.py"
+    
+async def main():
+    # 1. MCP 서버 프로세스를 STDIO 모드로 실행하도록 파라미터 설정
+    server_params = StdioServerParameters(
+        command="python",
+        args=[svrpath]  # MCP 서버 스크립트 경로
+    )
+    # 2. MCP 서버에 STDIO 클라이언트로 접속하여 세션 시작
+    async with stdio_client(server_params) as (read, write):
+        async with ClientSession(read, write) as session:
+            # MCP 세션 초기화 (서버 메타데이터 교환)
+            await session.initialize()
+            # 3. 서버로부터 사용 가능한 툴 불러오기 (툴 메타데이터 조회)
+            tools = await load_mcp_tools(session)
+            # 4. LLM 모델과 툴을 포함한 LangGraph 에이전트 생성
+            model = ChatOpenAI(model="gpt-4")  # OpenAI GPT-4 모델 (API 키 필요)
+            memory = MemorySaver()
+            config = {"configurable":{"thread_id":"1"}}
+            agent = create_react_agent(model, tools=tools, checkpointer=memory)
+            
+            print("채팅을 시작합니다. 채팅 종료를 원한다면 '테스트 종료'를 입력해주세요.\n")
+            text = input("채팅 내용 입력 : ")
+            
+            # 5. 자연어 질의로 에이전트 실행 (에이전트가 툴 호출하여 답변 생성)
+            while text != "테스트 종료":
+
+                query = {"messages": [HumanMessage(content=text)]}
+                result = await agent.ainvoke(query, config=config)
+                
+                print("\n답변 생성 완료\n")
+                while text != '0' and text != '1':
+                    text = input("'1' -> AI 답변만 보기, '0' -> 모든 메세지 보기\n 입력 : ")
+                    
+                    # 결과 출력
+                    if text == '0' :
+                        for message in result["messages"]:
+                            message.pretty_print()
+                    elif text == '1' :
+                        result["messages"][-1].pretty_print()
+                    else:
+                        print("\n'0' 아니면 '1'을 입력하세요.")
+                    print()
+                        
+                text = input("채팅 내용 입력 : ")
+            
+# 비동기 컨텍스트 실행
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+1. ```StdioServerParameters```에 MCP 서버 스크립트와 실행 방식을 지정
+2. ```stdio_client``` 컨텍스트를 통해 MCP 서버를 서브프로세스로 실행하면서 표준입출력 채널을 얻음. 그런 다음 ClientSession을 열고 ```session.initialize()```를 호출하여 서버와 초기 통신을 수행. 이 단계에서 클라이언트는 MCP 서버의 능력(capabilities) 정보를 받아 세션을 설정.
+3. ```load_mcp_tools(session)``` 호출 시 세션을 통해 서버의 툴 목록 요청이 전달되고, 서버에 등록된 툴 들의 정보가 표준 규격에 맞는 서술로 반환. 이 정보가 LangChain의 Tool 객체로 변환되어 tools 리스트에 담기는데, 내부적으로 MCP 서버로부터 툴들의 이름, 입력 타입/출력 타입, 설명 등이 전달되어 LangChain 툴로 생성.
+4. OpenAI(ChatOpenAI)을 사용해 LangGraph의 ReAct 에이전트를 생성. ```create_react_agent``` 사용, Memory 기능 구현. 보다 구체적인 LangGraph WorkFlow도 지정할 수 있으나 현 연습에서는 MCP 구현에 치중했기에 prebuilt된 Graph 사용.
