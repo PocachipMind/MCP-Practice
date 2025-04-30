@@ -181,3 +181,4 @@ if __name__ == "__main__":
 2. ```stdio_client``` 컨텍스트를 통해 MCP 서버를 서브프로세스로 실행하면서 표준입출력 채널을 얻음. 그런 다음 ClientSession을 열고 ```session.initialize()```를 호출하여 서버와 초기 통신을 수행. 이 단계에서 클라이언트는 MCP 서버의 능력(capabilities) 정보를 받아 세션을 설정.
 3. ```load_mcp_tools(session)``` 호출 시 세션을 통해 서버의 툴 목록 요청이 전달되고, 서버에 등록된 툴 들의 정보가 표준 규격에 맞는 서술로 반환. 이 정보가 LangChain의 Tool 객체로 변환되어 tools 리스트에 담기는데, 내부적으로 MCP 서버로부터 툴들의 이름, 입력 타입/출력 타입, 설명 등이 전달되어 LangChain 툴로 생성.
 4. OpenAI(ChatOpenAI)을 사용해 LangGraph의 ReAct 에이전트를 생성. ```create_react_agent``` 사용, Memory 기능 구현. 보다 구체적인 LangGraph WorkFlow도 지정할 수 있으나 현 연습에서는 MCP 구현에 치중했기에 prebuilt된 Graph 사용.
+5. 잘 동작하는지 테스트 하기 위한 Terminal을 통한 대화 로직 구현
