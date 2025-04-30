@@ -1,0 +1,11 @@
+id,name,email,age,gender,join_date,membership_type
+1,김민수,minsu.kim@example.com,29,M,2023-05-14,Gold
+2,이수진,sujin.lee@example.com,34,F,2022-11-30,Silver
+3,박지훈,jihoon.park@example.com,41,M,2021-08-21,VIP
+4,최유진,yujin.choi@example.com,25,F,2023-01-10,Free
+5,정현우,hyunwoo.jung@example.com,37,M,2020-04-03,Gold
+6,한서연,seoyeon.han@example.com,31,F,2024-02-19,Silver
+7,오준호,junho.oh@example.com,28,M,2023-07-22,Free
+8,강나영,nayoung.kang@example.com,26,F,2021-09-14,VIP
+9,윤도현,dohyun.yoon@example.com,33,M,2022-03-08,Silver
+10,배지민,jimin.bae@example.com,30,F,2024-06-27,Gold
