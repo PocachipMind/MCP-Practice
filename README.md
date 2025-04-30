@@ -106,11 +106,11 @@ MCP 서버의 툴을 호출하여 사용하기.
 
 MCP 서버에 클라이언트 세션으로 연결한 후, 서버가 노출한 툴을 불러와서 에이전트의 도구로 활용.
 
-stdio_client 함수를 사용하여 STDIO 방식 MCP 서버 프로세스를 실행 및 연결
+stdio_client 함수를 사용하여 STDIO 방식 MCP 서버 프로세스를 실행 및 연결.
 
-ClientSession을 통해 통신 세션을 관리
+ClientSession을 통해 통신 세션을 관리.
 
-session.initialize()로 세션을 초기화한 뒤, load_mcp_tools(session) 함수를 이용해 서버의 툴 목록을 가져와 LangChain 호환 툴 객체로 변환
+session.initialize()로 세션을 초기화한 뒤, load_mcp_tools(session) 함수를 이용해 서버의 툴 목록을 가져와 LangChain 호환 툴 객체로 변환.
 
 ```
 import asyncio
