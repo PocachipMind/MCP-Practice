@@ -3,11 +3,13 @@ MCP 서버를 구현하고 이를 LangGraph와 Claude를 이용하여 활용하�
 
 ## 1. FastMCP 활용 MCP 서버 ( 파일 mcp_server.py )
 
-MCP 서버를 FastMCP 클래스로 구성. 가상의 데이터베이스로 부터 정보를 얻는 MCP서버를 간단히 구현해봄.
+MCP 서버를 FastMCP 클래스로 구성. 
+
+가상의 데이터베이스로 부터 정보를 얻는 MCP서버를 간단히 구현.
 
 1. OpenAI 를 쓰기 위한 환경설정 ```load_dotenv()```
 2. FastMCP(name="Virtual_DB") 로 서버 인스턴스 생성
-3. @mcp.tool을 활용해 가상의 데이터베이스 정보를 찾아보는 Tools 구현
+3. @mcp.tool을 활용해 가상의 데이터베이스 정보를 찾아보는 Tools 등록 [(git)](https://github.com/modelcontextprotocol/python-sdk#:~:text=mcp%20%3D%20FastMCP%28)
 4. mcp.run(transport="stdio")로 서버 실행하면 STDIO를 통해 외부연결 기다림. STDIO = 서버를 별도 프로세스로 실행하고 표준 입출력 파이프로 통신하는 경량 IPC 방식 [(Git)](https://github.com/commitbyrajat/langgraph-mcp-integration) 
 
 ```
