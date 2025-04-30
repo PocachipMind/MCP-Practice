@@ -23,9 +23,7 @@ Image 객체는 응답을 이미지로 하기 위한 객체. 이미지처리에 
 Context는 다른 함수에서 resource에 접근할 때 사용.
 
 
-## 1. MCP 서버 ( FastMCP 활용 )
-
-mcp_server.py.
+## 1. FastMCP 활용 MCP 서버 ( 파일 mcp_server.py )
 
 MCP 서버를 FastMCP 클래스로 구성. 가상의 데이터베이스로 부터 정보를 얻는 MCP서버를 간단히 구현해봄.
 
