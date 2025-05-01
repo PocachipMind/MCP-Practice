@@ -230,5 +230,4 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 
 <br>
 
-## 3. Client : gradio로 대화 해보기 ( 파일 mcp_client_gradio_try.py )
-
+## 3. 
