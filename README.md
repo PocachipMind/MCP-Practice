@@ -258,7 +258,7 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 {
     "mcpServers": {
         "Virtual_DB": {
-            "command": "C:\\Users\\User\\anaconda3\\envs\\MCP-Projectpython\\python.exe",
+            "command": "C:\\Users\\User\\anaconda3\\envs\\MCP-Project\\python.exe",
             "args": [
                 "C:\\Users\\User\\Desktop\\DeepLearning\\mcp_PJ\\mcp_server.py"
             ]
