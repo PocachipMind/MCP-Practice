@@ -7,6 +7,7 @@ MCP 서버를 구현하고 이를 LangGraph와 Claude를 이용하여 활용하�
 
 **환경 :** MCP-Project.yaml ( 아나콘다 가상환경 활용 )
 
+<br>
 
 ## 1. FastMCP 활용 MCP 서버 ( 파일 mcp_server.py )
 
@@ -113,13 +114,17 @@ if __name__ == "__main__":
     mcp.run(transport="stdio")
 ```
 
+<br>
+
 ### MCP Inspector
 
 터미널 상에서 ```mcp dev "파일경로"``` 를 통해 서버가 잘 동작하는지 Test가 가능합니다. ( 저의 경우 ```mcp dev "C:\Users\User\Desktop\DeepLearning\mcp_PJ\mcp_server.py"``` )
 
-![image](https://github.com/user-attachments/assets/eee7e34d-a057-4078-8263-7d1454291b3a)
+<img src="https://github.com/user-attachments/assets/eee7e34d-a057-4078-8263-7d1454291b3a" width="60%" height="60%"/>
 
-MCP Inspector 에서 Tools의 목록과 Test를 해볼 수 있습니다.
+위에 보이는 MCP Inspector 사이트 에서 Tools의 목록과 Test를 해볼 수 있습니다.
+
+<br>
 
 ## 2. Client : Terminal을 통한 대화 ( 파일 mcp_client_local_terminal.py )
 
@@ -214,6 +219,7 @@ if __name__ == "__main__":
 
 ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 session이 닫히면 Tool들을 사용할 수 없고 Graph는 비동기 동작이 필요한 특징이 있습니다.
 
+<br>
 
 ## 3. Client : gradio로 대화 해보기 ( 파일 mcp_client_gradio_try.py )
 
