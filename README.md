@@ -1,6 +1,13 @@
 # MCP-Practice
 MCP 서버를 구현하고 이를 LangGraph와 Claude를 이용하여 활용하는 연습을 합니다.
 
+**서버 :** mcp_server.py
+
+**클라이언트 :** mcp_client_local_terminal.py
+
+**환경 :** 
+
+
 ## 1. FastMCP 활용 MCP 서버 ( 파일 mcp_server.py )
 
 MCP 서버를 FastMCP 클래스로 구성. 
