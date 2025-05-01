@@ -14,6 +14,8 @@ MCP 서버를 FastMCP 클래스로 구성.
 
 가상의 데이터베이스로 부터 정보를 얻는 MCP서버를 간단히 구현.
 
+툴 목록 : 1. 데이터 베이스 파일 목록, 2. 데이터 베이스 내부 파일 분석 도구 (csv)
+
 1. OpenAI 를 쓰기 위한 환경설정 ```load_dotenv()```
 2. ```FastMCP(name="Virtual_DB")``` 로 서버 인스턴스 생성
 3. ```@mcp.tool```을 활용해 가상의 데이터베이스 정보를 찾아보는 Tools 등록 [(git)](https://github.com/modelcontextprotocol/python-sdk#:~:text=mcp%20%3D%20FastMCP%28)
@@ -190,3 +192,10 @@ if __name__ == "__main__":
 4. OpenAI(ChatOpenAI)을 사용해 LangGraph의 ReAct 에이전트를 생성. ```create_react_agent``` 사용, Memory 기능 구현. 보다 구체적인 LangGraph WorkFlow도 지정할 수 있으나 현 연습에서는 MCP 구현에 치중했기에 prebuilt된 Graph 사용.
 5. 잘 동작하는지 테스트 하기 위한 Terminal을 통한 대화 로직 구현
 
+### Test :
+
+"데이터 베이스 안의 정보에서 사용자 ID 1의 이름이 뭔지 알려줘." 라고 질문해보겠습니다.
+
+![image](https://github.com/user-attachments/assets/6216e4f9-53e4-4f89-bba6-53db853e216f)
+
+보면 MCP로부터 Tool을 잘 호출하여 LangGraph에 적용된 것을 알 수 있습니다.
