@@ -241,7 +241,7 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 
 ### 2. 좌측 상단 메뉴를 통해 ```claude_desktop_config.json```을 엽니다.
 
-![image](https://github.com/user-attachments/assets/fcbe9357-7c50-4d52-bb9e-0cd7d54e99e6)
+<img src="https://github.com/user-attachments/assets/fcbe9357-7c50-4d52-bb9e-0cd7d54e99e6" width="70%" height="70%"/>
 
 <img src="https://github.com/user-attachments/assets/74a9afc0-f685-4468-af77-f75154842659" width="70%" height="70%"/>
 
