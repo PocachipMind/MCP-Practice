@@ -253,7 +253,7 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 
 <img src="https://github.com/user-attachments/assets/e11695d9-0ede-4ea4-bc6d-91b267b54237" width="70%" height="70%"/>
 
-나의 경우 다음과 같이 입력하였다. 가상환경을 활용하기 위해 Python 경로도 변경하였다.
+저의 경우 다음과 같이 입력했습니다. 가상환경을 활용하기 위해 Python 경로는 다음과 같습니다.
 ```
 {
     "mcpServers": {
@@ -267,4 +267,33 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 }
 ```
 
+만약 두 개 이상의 서버를 연결하고자 한다면 다음과 같은 형식으로 작성하세요
+```
+{
+    "mcpServers": {
+        "Virtual_DB": {
+            "command": "C:\\Users\\User\\anaconda3\\envs\\MCP-Project\\python.exe",
+            "args": [
+                "C:\\Users\\User\\Desktop\\DeepLearning\\mcp_PJ\\mcp_server.py"
+            ]
+        },
+        "another_Server": {
+            "command": "C:\\Users\\User\\anaconda3\\envs\\MCP-Project\\python.exe",
+            "args": [
+                "C:\\Users\\User\\Desktop\\DeepLearning\\mcp_PJ\\another_Server.py"
+            ]
+        },
+    }
+}
+```
+
+
 ### 4. 클로드를 완전히 종료했다가 다시 킵니다.
+
+클로드를 다시 키면 망치버튼이 활성화 되어있습니다.
+
+![image](https://github.com/user-attachments/assets/2494834e-d2b7-41ef-bebc-cb1a087e9bd8)
+
+![image](https://github.com/user-attachments/assets/09a5034a-b75a-4a0c-adf2-295b445896cb)
+
+이제 대화를 하면 내가 만든 도구를 사용할 수 있는 클로드와 대화를 합니다.
