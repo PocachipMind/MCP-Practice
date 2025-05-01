@@ -226,6 +226,8 @@ if __name__ == "__main__":
 
 ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 session이 닫히면 Tool들을 사용할 수 없고 Graph는 비동기 동작이 필요한 특징이 있습니다.
 
+![VID_20250501_093121-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3f53a28e-f266-4df2-835a-0f7e2b0eadbc)
+
 <br>
 
 ## 3. Client : gradio로 대화 해보기 ( 파일 mcp_client_gradio_try.py )
