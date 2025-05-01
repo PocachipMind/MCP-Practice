@@ -112,6 +112,12 @@ if __name__ == "__main__":
     # MCP 서버 실행 (표준입출력 transport 사용)
     mcp.run(transport="stdio")
 ```
+
+### MCP Inspector
+
+터미널 상에서 ```mcp dev "파일경로"``` 를 통해 서버가 잘 동작하는지 Test가 가능합니다. ( 저의 경우 ```mcp dev "C:\Users\User\Desktop\DeepLearning\mcp_PJ\mcp_server.py"``` )
+
+
 ## 2. Client : Terminal을 통한 대화 ( 파일 mcp_client_local_terminal.py )
 
 MCP 서버의 툴을 호출하여 사용하기.
@@ -203,4 +209,8 @@ if __name__ == "__main__":
 
 보면 MCP에 정의된 Tool을 잘 호출하여 LangGraph에 적용된 것을 알 수 있습니다.
 
-ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 session이 닫히면 사용할 수 없고 비동기 동작이 필요한 특징이 있습니다.
+ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 session이 닫히면 Tool들을 사용할 수 없고 Graph는 비동기 동작이 필요한 특징이 있습니다.
+
+
+## 3. Client : gradio로 대화 해보기 ( 파일 mcp_client_gradio_try.py )
+
