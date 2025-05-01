@@ -199,6 +199,8 @@ if __name__ == "__main__":
 
 "데이터 베이스 안의 정보에서 사용자 ID 1의 이름이 뭔지 알려줘." 라고 질문해보겠습니다.
 
-![image](https://github.com/user-attachments/assets/6216e4f9-53e4-4f89-bba6-53db853e216f)
+![image](https://github.com/user-attachments/assets/4c028958-1050-4cc6-827c-619155da70c2)
 
-보면 MCP로부터 Tool을 잘 호출하여 LangGraph에 적용된 것을 알 수 있습니다.
+보면 MCP에 정의된 Tool을 잘 호출하여 LangGraph에 적용된 것을 알 수 있습니다.
+
+ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 session이 닫히면 사용할 수 없고 비동기 동작이 필요한 특징이 있습니다.
