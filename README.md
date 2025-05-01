@@ -233,4 +233,27 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 
 ## 3. MCP 서버 Desktop Claude 연결
 
+제작한 MCP 서버를 클로드에 연결해봅니다.
 
+![image](https://github.com/user-attachments/assets/fcbe9357-7c50-4d52-bb9e-0cd7d54e99e6)
+
+![image](https://github.com/user-attachments/assets/74a9afc0-f685-4468-af77-f75154842659)
+
+![image](https://github.com/user-attachments/assets/321a518d-d179-40eb-89a3-86ed2e42ad9b)
+
+![image](https://github.com/user-attachments/assets/6f43c8e2-475d-45b3-9adc-67796f75aa08)
+
+![image](https://github.com/user-attachments/assets/e11695d9-0ede-4ea4-bc6d-91b267b54237)
+
+```
+{
+    "mcpServers": {
+        "Virtual_DB": {
+            "command": "python",
+            "args": [
+                "C:\\Users\\User\\Desktop\\DeepLearning\\mcp_PJ\\mcp_server.py"
+            ]
+        }
+    }
+}
+```
