@@ -8,11 +8,10 @@ MCP 서버를 구현하고 이를 LangGraph와 Claude를 이용하여 활용하�
 **클라이언트 :** mcp_client_local_terminal.py
 
 **환경 :** MCP-Project.yaml ( 아나콘다 가상환경 활용 )
+
 <br>
 
-
-https://github.com/user-attachments/assets/40d3939c-e47c-476a-af4b-f93342d43da2
-
+클로드 적용 영상
 
 https://github.com/user-attachments/assets/b0ecd57d-1c57-4602-adef-dbbcec387167
 
