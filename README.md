@@ -253,12 +253,12 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 
 <img src="https://github.com/user-attachments/assets/e11695d9-0ede-4ea4-bc6d-91b267b54237" width="70%" height="70%"/>
 
-나의 경우 다음과 같이 입력하였다.
+나의 경우 다음과 같이 입력하였다. 가상환경을 활용하기 위해 Python 경로도 변경하였다.
 ```
 {
     "mcpServers": {
         "Virtual_DB": {
-            "command": "python",
+            "command": "C:\\Users\\User\\anaconda3\\envs\\MCP-Projectpython\\python.exe",
             "args": [
                 "C:\\Users\\User\\Desktop\\DeepLearning\\mcp_PJ\\mcp_server.py"
             ]
