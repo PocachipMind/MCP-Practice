@@ -249,7 +249,7 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 
 <img src="https://github.com/user-attachments/assets/6f43c8e2-475d-45b3-9adc-67796f75aa08" width="70%" height="70%"/>
 
-### 3. 다음과 같이 서버를 추가한다.
+### 3. 다음과 같이 서버를 추가합니다.
 
 <img src="https://github.com/user-attachments/assets/e11695d9-0ede-4ea4-bc6d-91b267b54237" width="70%" height="70%"/>
 
@@ -266,3 +266,5 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
     }
 }
 ```
+
+### 4. 클로드를 완전히 종료했다가 다시 킵니다.
