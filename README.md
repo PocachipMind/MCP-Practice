@@ -117,6 +117,9 @@ if __name__ == "__main__":
 
 터미널 상에서 ```mcp dev "파일경로"``` 를 통해 서버가 잘 동작하는지 Test가 가능합니다. ( 저의 경우 ```mcp dev "C:\Users\User\Desktop\DeepLearning\mcp_PJ\mcp_server.py"``` )
 
+![image](https://github.com/user-attachments/assets/eee7e34d-a057-4078-8263-7d1454291b3a)
+
+MCP Inspector 에서 Tools의 목록과 Test를 해볼 수 있습니다.
 
 ## 2. Client : Terminal을 통한 대화 ( 파일 mcp_client_local_terminal.py )
 
