@@ -235,16 +235,25 @@ ClientSession 을 통해 도구를 호출하고 사용하는 것이므로 sessio
 
 제작한 MCP 서버를 클로드에 연결해봅니다.
 
+### 1. Desktop Claude를 설치하고 실행합니다.
+
+<img src="https://github.com/user-attachments/assets/fcbe9357-7c50-4d52-bb9e-0cd7d54e99e6" width="70%" height="70%"/>
+
+### 2. 좌측 상단 메뉴를 통해 ```claude_desktop_config.json```을 엽니다.
+
 ![image](https://github.com/user-attachments/assets/fcbe9357-7c50-4d52-bb9e-0cd7d54e99e6)
 
-![image](https://github.com/user-attachments/assets/74a9afc0-f685-4468-af77-f75154842659)
+<img src="https://github.com/user-attachments/assets/74a9afc0-f685-4468-af77-f75154842659" width="70%" height="70%"/>
 
-![image](https://github.com/user-attachments/assets/321a518d-d179-40eb-89a3-86ed2e42ad9b)
+<img src="https://github.com/user-attachments/assets/321a518d-d179-40eb-89a3-86ed2e42ad9b" width="70%" height="70%"/>
 
-![image](https://github.com/user-attachments/assets/6f43c8e2-475d-45b3-9adc-67796f75aa08)
+<img src="https://github.com/user-attachments/assets/6f43c8e2-475d-45b3-9adc-67796f75aa08" width="70%" height="70%"/>
 
-![image](https://github.com/user-attachments/assets/e11695d9-0ede-4ea4-bc6d-91b267b54237)
+### 3. 다음과 같이 서버를 추가한다.
 
+<img src="https://github.com/user-attachments/assets/e11695d9-0ede-4ea4-bc6d-91b267b54237" width="70%" height="70%"/>
+
+나의 경우 다음과 같이 입력하였다.
 ```
 {
     "mcpServers": {
