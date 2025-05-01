@@ -10,6 +10,10 @@ MCP 서버를 구현하고 이를 LangGraph와 Claude를 이용하여 활용하�
 **환경 :** MCP-Project.yaml ( 아나콘다 가상환경 활용 )
 <br>
 
+https://github.com/user-attachments/assets/b0ecd57d-1c57-4602-adef-dbbcec387167
+
+<br>
+
 ## 1. FastMCP 활용 MCP 서버 ( 파일 mcp_server.py )
 
 **툴 목록 :** 
