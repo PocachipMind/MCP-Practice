@@ -121,7 +121,9 @@ if __name__ == "__main__":
 
 ### MCP Inspector
 
-터미널 상에서 ```mcp dev "파일경로"``` 를 통해 서버가 잘 동작하는지 Test가 가능합니다. ( 저의 경우 ```mcp dev "C:\Users\User\Desktop\DeepLearning\mcp_PJ\mcp_server.py"``` )
+터미널 상에서 ```mcp dev "파일경로"``` 를 통해 서버가 잘 동작하는지 Test가 가능합니다. 
+
+( 저의 경우 ```mcp dev "C:\Users\User\Desktop\DeepLearning\mcp_PJ\mcp_server.py"``` )
 
 <img src="https://github.com/user-attachments/assets/eee7e34d-a057-4078-8263-7d1454291b3a" width="85%" height="85%"/>
 
