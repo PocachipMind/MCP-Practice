@@ -14,11 +14,14 @@ MCP 서버를 구현하고 이를 LangGraph와 Claude를 이용하여 활용하�
 **툴 목록 :** 
 - 데이터 베이스 파일 목록 확인 도구
 - 데이터 베이스 내부 파일(csv) 분석 도구
+  
+<br>
 
 MCP 서버를 FastMCP 클래스로 구성. 
 
 가상의 데이터베이스로 부터 정보를 얻는 MCP서버를 간단히 구현.
 
+<br>
 
 1. OpenAI 를 쓰기 위한 환경설정 ```load_dotenv()```
 2. ```FastMCP(name="Virtual_DB")``` 로 서버 인스턴스 생성
@@ -120,7 +123,7 @@ if __name__ == "__main__":
 
 터미널 상에서 ```mcp dev "파일경로"``` 를 통해 서버가 잘 동작하는지 Test가 가능합니다. ( 저의 경우 ```mcp dev "C:\Users\User\Desktop\DeepLearning\mcp_PJ\mcp_server.py"``` )
 
-<img src="https://github.com/user-attachments/assets/eee7e34d-a057-4078-8263-7d1454291b3a" width="60%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/eee7e34d-a057-4078-8263-7d1454291b3a" width="85%" height="85%"/>
 
 위에 보이는 MCP Inspector 사이트 에서 Tools의 목록과 Test를 해볼 수 있습니다.
 
@@ -208,6 +211,8 @@ if __name__ == "__main__":
 3. ```load_mcp_tools(session)``` 호출 시 세션을 통해 서버의 툴 목록 요청이 전달되고, 서버에 등록된 툴 들의 정보가 표준 규격에 맞는 서술로 반환. 이 정보가 LangChain의 Tool 객체로 변환되어 tools 리스트에 담기는데, 내부적으로 MCP 서버로부터 툴들의 이름, 입력 타입/출력 타입, 설명 등이 전달되어 LangChain 툴로 생성.
 4. OpenAI(ChatOpenAI)을 사용해 LangGraph의 ReAct 에이전트를 생성. ```create_react_agent``` 사용, Memory 기능 구현. 보다 구체적인 LangGraph WorkFlow도 지정할 수 있으나 현 연습에서는 MCP 구현에 치중했기에 prebuilt된 Graph 사용.
 5. 잘 동작하는지 테스트 하기 위한 Terminal을 통한 대화 로직 구현
+
+<br>
 
 ### Test :
 
